@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Lomibao — Web Developer & Graphic Designer</title>
+  <meta name="description" content="Alex Lomibao is a web developer and graphic designer with 5 years of experience building WordPress, PHP and Shopify websites.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-label">View ↗</span></div>
+
+  <header class="nav">
+    <a href="#top" class="logo" aria-label="Alex Lomibao, home">
+      <span class="logo-mark">A</span><span class="logo-text">Alex Lomibao</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#toolbox">Toolbox</a>
+    </nav>
+    <a href="#contact" class="nav-cta"><span class="dot"></span>Available for work</a>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" data-mode="design">
+      <div class="mode-switch" role="group" aria-label="Choose a hero style">
+        <button class="mode-btn active" data-mode="design" aria-pressed="true">✎ Designer</button>
+        <button class="mode-btn" data-mode="dev" aria-pressed="false">&lt;/&gt; Developer</button>
+        <span class="mode-thumb" aria-hidden="true"></span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="design-view">
+          <span class="line">I design <em>&amp;</em></span>
+          <span class="line">build <span class="pill"><img src="assets/work/botanopia.jpg" alt=""></span> websites</span>
+          <span class="line">people <em class="scribble">love</em> to use.</span>
+        </span>
+        <span class="dev-view" aria-hidden="true">
+          <span class="line"><i>const</i> alex = {</span>
+          <span class="line">&nbsp;&nbsp;role: <b>"designer + dev"</b>,</span>
+          <span class="line">&nbsp;&nbsp;years: <u>5</u>,</span>
+          <span class="line">&nbsp;&nbsp;ships: [<b>"wp"</b>, <b>"php"</b>, <b>"shopify"</b>]</span>
+          <span class="line">};<span class="caret"></span></span>
+        </span>
+      </h1>
+
+      <div class="hero-foot">
+        <p class="hero-intro">Hi, I'm <strong>Alex Lomibao</strong>, a graphic designer and web developer from Legazpi, Philippines. For five years I've taken client sites from first sketch to launch in WordPress, PHP and Shopify.</p>
+        <a href="#work" class="round-btn" aria-label="See selected work">
+          <svg viewBox="0 0 200 200" class="spin-text" aria-hidden="true">
+            <defs><path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+            <text><textPath href="#circle">see selected work • see selected work • </textPath></text>
+          </svg>
+          <span class="round-arrow">↓</span>
+        </a>
+      </div>
+
+      <!-- Draggable stickers -->
+      <div class="stickers" aria-hidden="true">
+        <span class="sticker s-wp" style="--r:-8deg; top:14%; right:8%">WordPress</span>
+        <span class="sticker s-php" style="--r:6deg; top:38%; right:3%">PHP</span>
+        <span class="sticker s-shop" style="--r:-4deg; top:58%; right:13%">Shopify</span>
+        <span class="sticker s-figma" style="--r:10deg; top:24%; right:22%">Figma ✦</span>
+        <span class="sticker s-star" style="--r:0deg; top:15%; right:31%">★</span>
+      </div>
+      <p class="drag-hint" aria-hidden="true">↖ psst, the stickers are draggable</p>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>WordPress</span><i>✦</i><span>Shopify</span><i>✦</i><span>PHP</span><i>✦</i><span>Laravel</span><i>✦</i><span>WooCommerce</span><i>✦</i><span>UI Design</span><i>✦</i><span>Figma</span><i>✦</i><span>Photoshop</span><i>✦</i><span>Illustrator</span><i>✦</i>
+        <span>WordPress</span><i>✦</i><span>Shopify</span><i>✦</i><span>PHP</span><i>✦</i><span>Laravel</span><i>✦</i><span>WooCommerce</span><i>✦</i><span>UI Design</span><i>✦</i><span>Figma</span><i>✦</i><span>Photoshop</span><i>✦</i><span>Illustrator</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ WORK ============ -->
+    <section id="work" class="work">
+      <div class="section-head">
+        <p class="kicker">(01) Selected work</p>
+        <h2>Things I've <em>shipped</em></h2>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Filter projects by platform">
+        <button class="filter active" data-filter="all">All <sup>13</sup></button>
+        <button class="filter" data-filter="wordpress">WordPress <sup>4</sup></button>
+        <button class="filter" data-filter="php">PHP <sup>5</sup></button>
+        <button class="filter" data-filter="shopify">Shopify <sup>4</sup></button>
+      </div>
+
+      <div class="grid" id="projects"></div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="about">
+      <p class="kicker">(02) About</p>
+      <p class="about-statement reveal">
+        I'm a <mark>graphic designer</mark> who learned to code, so the sites I build look like the mockup <em>and</em> work the way they should. I care about the small details that make a site <mark>easy and enjoyable</mark> to use.
+      </p>
+
+      <div class="about-grid">
+        <div class="stat reveal"><strong>5+</strong><span>years designing and building websites</span></div>
+        <div class="stat reveal"><strong>3</strong><span>core platforms: WordPress, PHP, Shopify</span></div>
+        <div class="stat reveal"><strong>7</strong><span>design tools in daily rotation</span></div>
+
+        <div class="ticket reveal">
+          <div class="ticket-main">
+            <p class="ticket-label">Education</p>
+            <h3>Bachelor's in Computer Science</h3>
+            <p>Computer Science Institute</p>
+            <p class="ticket-note">Graduated with distinction. Studied graphics and web development.</p>
+          </div>
+          <div class="ticket-stub">
+            <span>2016</span><span class="arrow">→</span><span>2019</span>
+          </div>
+        </div>
+
+        <div class="traits reveal">
+          <p class="ticket-label">What clients get</p>
+          <ul>
+            <li>Detail oriented</li><li>Creative</li><li>Flexible</li><li>Innovative</li>
+            <li>Enthusiastic</li><li>Honest</li><li>Trustworthy</li><li>Ethical</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TOOLBOX ============ -->
+    <section id="toolbox" class="toolbox">
+      <div class="section-head">
+        <p class="kicker">(03) Toolbox</p>
+        <h2>Press a few <em>keys</em></h2>
+      </div>
+
+      <div class="keyboard">
+        <div class="key-group">
+          <p class="key-label">Platforms</p>
+          <div class="keys"><kbd>WordPress</kbd><kbd>WooCommerce</kbd><kbd>Shopify</kbd><kbd>Squarespace</kbd><kbd>PHP</kbd><kbd>Laravel</kbd><kbd>CodeIgniter</kbd></div>
+        </div>
+        <div class="key-group">
+          <p class="key-label">Front-end</p>
+          <div class="keys"><kbd>HTML5</kbd><kbd>CSS3</kbd><kbd>SASS</kbd><kbd>Bootstrap</kbd><kbd>JavaScript</kbd><kbd>jQuery</kbd></div>
+        </div>
+        <div class="key-group">
+          <p class="key-label">Design</p>
+          <div class="keys accent"><kbd>Photoshop</kbd><kbd>Illustrator</kbd><kbd>Figma</kbd><kbd>Adobe XD</kbd><kbd>Sketch</kbd><kbd>InVision</kbd><kbd>Zeplin</kbd></div>
+        </div>
+        <div class="key-group">
+          <p class="key-label">Data</p>
+          <div class="keys"><kbd>MySQL</kbd><kbd>MySQLi</kbd><kbd>PostgreSQL</kbd><kbd>Oracle</kbd><kbd>Firebase</kbd></div>
+        </div>
+        <div class="key-group">
+          <p class="key-label">Servers &amp; workflow</p>
+          <div class="keys"><kbd>AWS</kbd><kbd>Heroku</kbd><kbd>DigitalOcean</kbd><kbd>WP Engine</kbd><kbd>GoDaddy</kbd><kbd>SiteGround</kbd><kbd>Gulp</kbd><kbd>Git</kbd></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="contact">
+      <p class="kicker">(04) Contact</p>
+      <h2 class="contact-title">Got a site<br>in <em>mind?</em></h2>
+      <div class="contact-row">
+        <a href="mailto:alexlomibao26@gmail.com" class="email">alexlomibao26@gmail.com</a>
+        <button class="copy-btn" type="button" data-email="alexlomibao26@gmail.com">Copy email</button>
+      </div>
+      <div class="contact-meta">
+        <p><span class="kicker">Based in</span>Rosal Street, Legazpi 4500, Philippines</p>
+        <p><span class="kicker">Local time</span><span id="clock">--:--</span> <small>(PHT)</small></p>
+        <p><span class="kicker">Open to</span>Freelance &amp; full-time roles</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Alex Lomibao</span>
+    <span class="footer-big" aria-hidden="true">Alex Lomibao</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
